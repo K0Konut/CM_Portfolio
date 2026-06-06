@@ -88,9 +88,9 @@ Je conçois et développe des projets web pensés pour être utiles, lisibles et
 
 ## 5. Direction artistique
 
-Cette partie sera détaillée plus tard dans un document ou un prompt séparé.
+La direction artistique, le territoire de marque et les principes UX sont définis dans le document [Brand & UX Direction](./Brand-UX-Direction.md).
 
-Pour le moment, le PRD ne fixe pas encore précisément :
+Ce document fixe le cadre dans lequel seront définis :
 
 * la palette de couleurs
 * les typographies
@@ -99,7 +99,7 @@ Pour le moment, le PRD ne fixe pas encore précisément :
 * le style exact des sections
 * le design system
 
-La direction artistique devra être définie après le cadrage du contenu, des pages et de l’architecture générale.
+Les choix visuels détaillés, comme la palette de couleurs et les typographies finales, pourront être complétés pendant la conception du design system.
 
 ---
 
@@ -637,4 +637,3 @@ Optimiser les performances
 ```
 
 ---
-
