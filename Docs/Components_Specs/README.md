@@ -9,6 +9,7 @@ Document basé sur le brief validé du portfolio : territoire Creative Full-Stac
 * [StatusBadge](./Specs_StatusBadge.md)
 * [SectionTitle](./Specs_SectionTitle.md)
 * [ProjectCard](./Specs_ProjectCard.md)
+* [ProjectHero](./Specs_ProjectHero.md)
 
 ## Résumé des décisions V1
 
@@ -31,3 +32,7 @@ Structure les pages avec une hiérarchie forte et un usage maîtrisé de HUMANE.
 ### ProjectCard
 
 Élément central du portfolio, cliquable vers `/projets/:slug`, visuel, technique et mémorable.
+
+### ProjectHero
+
+Introduction forte d'une page détail projet, avec titre, contexte rapide, stack et image cover.
