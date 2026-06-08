@@ -13,6 +13,7 @@ Document basé sur le brief validé du portfolio : territoire Creative Full-Stac
 * [ProjectMeta](./Specs_ProjectMeta.md)
 * [ContactCTA](./Specs_ContactCTA.md)
 * [Header](./Specs_Header.md)
+* [Footer](./Specs_Footer.md)
 
 ## Résumé des décisions V1
 
@@ -51,3 +52,7 @@ Bloc de conclusion fort qui transforme la visite en prise de contact.
 ### Header
 
 Navigation principale sticky, responsive et accessible sur toutes les pages.
+
+### Footer
+
+Clôture éditoriale pleine largeur avec identité forte, navigation et contacts.
