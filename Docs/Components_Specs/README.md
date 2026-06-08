@@ -11,6 +11,7 @@ Document basé sur le brief validé du portfolio : territoire Creative Full-Stac
 * [ProjectCard](./Specs_ProjectCard.md)
 * [ProjectHero](./Specs_ProjectHero.md)
 * [ProjectMeta](./Specs_ProjectMeta.md)
+* [ContactCTA](./Specs_ContactCTA.md)
 
 ## Résumé des décisions V1
 
@@ -41,3 +42,7 @@ Introduction forte d'une page détail projet, avec titre, contexte rapide, stack
 ### ProjectMeta
 
 Résumé structuré et lisible des informations clés d'un projet.
+
+### ContactCTA
+
+Bloc de conclusion fort qui transforme la visite en prise de contact.
