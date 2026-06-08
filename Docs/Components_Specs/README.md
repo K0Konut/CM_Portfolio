@@ -12,6 +12,7 @@ Document basé sur le brief validé du portfolio : territoire Creative Full-Stac
 * [ProjectHero](./Specs_ProjectHero.md)
 * [ProjectMeta](./Specs_ProjectMeta.md)
 * [ContactCTA](./Specs_ContactCTA.md)
+* [Header](./Specs_Header.md)
 
 ## Résumé des décisions V1
 
@@ -46,3 +47,7 @@ Résumé structuré et lisible des informations clés d'un projet.
 ### ContactCTA
 
 Bloc de conclusion fort qui transforme la visite en prise de contact.
+
+### Header
+
+Navigation principale sticky, responsive et accessible sur toutes les pages.
