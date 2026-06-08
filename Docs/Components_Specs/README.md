@@ -10,6 +10,7 @@ Document basé sur le brief validé du portfolio : territoire Creative Full-Stac
 * [SectionTitle](./Specs_SectionTitle.md)
 * [ProjectCard](./Specs_ProjectCard.md)
 * [ProjectHero](./Specs_ProjectHero.md)
+* [ProjectMeta](./Specs_ProjectMeta.md)
 
 ## Résumé des décisions V1
 
@@ -36,3 +37,7 @@ Structure les pages avec une hiérarchie forte et un usage maîtrisé de HUMANE.
 ### ProjectHero
 
 Introduction forte d'une page détail projet, avec titre, contexte rapide, stack et image cover.
+
+### ProjectMeta
+
+Résumé structuré et lisible des informations clés d'un projet.
