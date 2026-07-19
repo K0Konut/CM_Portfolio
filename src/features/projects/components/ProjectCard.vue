@@ -34,12 +34,12 @@ defineProps<{
 <style scoped>
 .project-card {
   display: flex;
-  min-height: 520px;
+  min-height: 640px;
   flex-direction: column;
   gap: var(--space-md);
-  padding: var(--space-lg);
+  padding: var(--space-xl);
   border: var(--border-strong);
-  border-radius: 22px;
+  border-radius: 24px;
   box-shadow: 8px 8px 0 var(--color-neutral-black);
   transition:
     transform var(--motion-duration-default) var(--motion-ease-snappy),
@@ -52,7 +52,7 @@ defineProps<{
 }
 
 .project-card--cream {
-  background: var(--color-neutral-cream);
+  background: var(--color-neutral-sand);
 }
 
 .project-card--violet {
@@ -66,9 +66,9 @@ defineProps<{
 }
 
 .project-card__image {
-  min-height: 260px;
+  aspect-ratio: 338 / 288;
   border: 3px solid var(--color-neutral-black);
-  border-radius: 10px;
+  border-radius: 15px;
   background: var(--color-neutral-grey);
 }
 
@@ -79,7 +79,7 @@ defineProps<{
 }
 
 .project-card h3 {
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 2.4vw, 2.45rem);
   line-height: 1;
 }
 
@@ -96,5 +96,12 @@ defineProps<{
 .project-card .base-button {
   align-self: flex-start;
   margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  .project-card {
+    min-height: auto;
+    padding: var(--space-lg);
+  }
 }
 </style>

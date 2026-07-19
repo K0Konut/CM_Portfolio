@@ -34,7 +34,7 @@ defineProps<{
 }
 
 .section-title h2 {
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-size: clamp(2.5rem, 4.3vw, 4.25rem);
   font-weight: 950;
   line-height: 0.95;
   letter-spacing: 0;

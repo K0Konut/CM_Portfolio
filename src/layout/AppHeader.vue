@@ -28,7 +28,7 @@ const links = [
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 72px;
+  min-height: 80px;
   padding: 0 var(--space-4xl);
   border-bottom: 2px solid var(--color-neutral-black);
   background: var(--color-neutral-cream);
