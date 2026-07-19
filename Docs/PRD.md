@@ -482,11 +482,13 @@ clarté + personnalité + professionnalisme
 
 ## 13. Animations
 
-Cette partie sera traitée plus tard.
+Cette partie est cadrée dans un document dédié :
 
-Pour le moment, le PRD ne définit pas précisément les animations.
+```txt
+Docs/Motion_Spec_V1.md
+```
 
-À définir dans une étape suivante :
+La V1 motion prévoit :
 
 ```txt
 animations au scroll
@@ -495,7 +497,12 @@ micro-interactions
 animations des cartes projet
 apparition des sections
 effets visuels spécifiques
+respect de prefers-reduced-motion
 ```
+
+Le PRD garde ici le niveau produit. Les valeurs exactes de durée, easing,
+stagger, hover, page transition et accessibilité motion sont définies dans la
+spec motion.
 
 ---
 

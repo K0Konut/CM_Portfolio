@@ -1,0 +1,35 @@
+:root {
+  --color-brand-electric: #4b3cff;
+  --color-brand-deep: #17105b;
+  --color-accent-lime: #c7ff00;
+  --color-accent-pink: #ff6bd6;
+  --color-neutral-black: #101113;
+  --color-neutral-cream: #f5f1e8;
+  --color-neutral-grey: #474747;
+  --font-display: "HUMANE", "Arial Narrow", "Impact", sans-serif;
+  --font-body: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: "Fraunces", Georgia, serif;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  --space-5xl: 96px;
+  --layout-max-width: 1280px;
+  --layout-page-width: 1440px;
+  --radius-card: 8px;
+  --border-strong: 3px solid var(--color-neutral-black);
+  --shadow-black: 8px 8px 0 var(--color-neutral-black);
+  --shadow-lime: 8px 8px 0 var(--color-accent-lime);
+  --motion-duration-fast: 150ms;
+  --motion-duration-default: 250ms;
+  --motion-duration-slow: 400ms;
+  --motion-duration-reveal: 600ms;
+  --motion-ease-default: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-snappy: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --motion-ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+}
