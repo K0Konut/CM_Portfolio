@@ -118,11 +118,14 @@ const aboutPills = [
           <span></span>
           <span></span>
         </div>
-        <pre>const costa = {
-  role: "full-stack developer",
-  focus: "creative interfaces",
-  stack: ["Vue", "Node", "Firebase"]
-}</pre>
+        <div class="home-hero__code-content">
+          <p><span>const</span> costa = {</p>
+          <p><i>role:</i> "full-stack developer",</p>
+          <p><i>focus:</i> "creative interfaces",</p>
+          <p><i>stack:</i> ["Vue", "Node", "Firebase"]</p>
+          <p>}</p>
+        </div>
+        <div class="home-hero__code-chip">available_for_interface</div>
         <span class="home-hero__code-sticker">Creative dev</span>
       </div>
     </div>
@@ -134,6 +137,7 @@ const aboutPills = [
     <span class="home-doodle home-doodle--spark home-projects-section__spark-b" aria-hidden="true"></span>
     <div class="container content-layer">
       <SectionTitle
+        class="home-section-title home-section-title--projects"
         eyebrow="01 - Projets"
         title="Projets, interfaces & experimentations"
         description="Une selection de projets web, applications et interfaces creatives ou j'explore le developpement full-stack."
@@ -157,6 +161,7 @@ const aboutPills = [
     <span class="home-doodle home-doodle--burst home-stack__burst" aria-hidden="true"></span>
     <div class="container content-layer">
       <SectionTitle
+        class="home-section-title home-section-title--stack"
         eyebrow="02 - Stack"
         title="Une stack moderne pour des interfaces vivantes."
         description="J'utilise une stack claire et moderne, avec une attention particuliere portee a la modularite, au responsive et a l'experience utilisateur."
@@ -192,6 +197,7 @@ const aboutPills = [
     <span class="home-doodle home-doodle--spark home-process__spark" aria-hidden="true"></span>
     <div class="container content-layer">
       <SectionTitle
+        class="home-section-title home-section-title--process"
         eyebrow="03 - Methode"
         title="Je pense mes projets comme des systemes complets."
         description="Une idee claire, une interface expressive, des composants reutilisables et une base technique capable d'evoluer."
@@ -336,6 +342,15 @@ const aboutPills = [
   transform: rotate(-45deg);
 }
 
+.home-section-title--projects {
+  max-width: 860px;
+}
+
+.home-section-title--stack,
+.home-section-title--process {
+  max-width: 780px;
+}
+
 .home-hero {
   min-height: 720px;
   display: flex;
@@ -428,6 +443,10 @@ const aboutPills = [
 
 .home-hero__code {
   position: relative;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: var(--space-xl);
   border: var(--border-strong);
   border-radius: 24px;
@@ -455,10 +474,35 @@ const aboutPills = [
   background: var(--color-neutral-cream);
 }
 
-.home-hero__code pre {
+.home-hero__code-content {
   overflow: hidden;
+  color: var(--color-accent-lime);
+  font-family: "Courier New", monospace;
   font-size: clamp(0.95rem, 1.2vw, 1.15rem);
-  line-height: 1.65;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.home-hero__code-content span {
+  color: var(--color-accent-pink);
+}
+
+.home-hero__code-content i {
+  color: var(--color-neutral-cream);
+  font-style: normal;
+}
+
+.home-hero__code-chip {
+  width: 100%;
+  margin-top: var(--space-xl);
+  padding: 18px 22px;
+  border: 2px solid var(--color-neutral-black);
+  border-radius: 15px;
+  background: var(--color-accent-lime);
+  color: var(--color-neutral-black);
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  font-weight: 900;
 }
 
 .home-hero__code-sticker {
@@ -798,6 +842,7 @@ const aboutPills = [
   }
 
   .home-hero__code {
+    min-height: 260px;
     transform: rotate(0deg);
   }
 

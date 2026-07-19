@@ -27,7 +27,12 @@ defineProps<{
         :tone="item.name === 'TypeScript' ? 'lime' : 'cream'"
       />
     </div>
-    <BaseButton :href="`/projets/${project.slug}`">Voir le projet</BaseButton>
+    <BaseButton
+      :href="`/projets/${project.slug}`"
+      :variant="variant === 'cream' ? 'dark' : variant === 'dark' ? 'pink' : 'lime'"
+    >
+      Voir le projet
+    </BaseButton>
   </article>
 </template>
 

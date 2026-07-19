@@ -101,6 +101,10 @@ const footerColumns = [
   color: rgba(245, 241, 232, 0.72);
 }
 
+.app-footer--cream .app-footer__caption {
+  color: var(--color-neutral-grey);
+}
+
 .app-footer__nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
