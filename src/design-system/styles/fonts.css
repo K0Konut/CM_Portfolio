@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "HUMANE";
+  src: url("/fonts/humane-vf.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-variable.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300 900;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-72pt-soft-light-italic.ttf") format("truetype");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 300;
+}

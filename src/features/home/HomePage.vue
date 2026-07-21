@@ -408,17 +408,13 @@ const aboutPills = [
 }
 
 .home-hero__title {
-  width: min(100%, 620px);
+  width: min(100%, 660px);
   margin-top: var(--space-xs);
-  font-size: clamp(7.5rem, 11vw, 10.5rem);
+  font-size: clamp(10rem, 15vw, 15rem);
 }
 
 .home-hero__title span {
   display: block;
-  width: max-content;
-  max-width: 145%;
-  transform: scaleX(0.68);
-  transform-origin: left center;
 }
 
 .home-hero__actions {
@@ -848,12 +844,7 @@ const aboutPills = [
 
   .home-hero__title {
     width: 100%;
-    font-size: clamp(4.75rem, 22vw, 5.7rem);
-  }
-
-  .home-hero__title span {
-    max-width: 150%;
-    transform: scaleX(0.58);
+    font-size: clamp(5.7rem, 29vw, 7.2rem);
   }
 
   .home-projects,

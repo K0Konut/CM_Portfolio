@@ -37,17 +37,14 @@ import BaseButton from './BaseButton.vue'
 }
 
 .contact-cta__title {
-  width: max-content;
-  max-width: 250%;
+  max-width: 1120px;
   color: var(--color-neutral-cream);
   font-family: var(--font-display);
-  font-size: clamp(5.5rem, 9vw, 8.5rem);
+  font-size: clamp(6.8rem, 11vw, 10rem);
   line-height: 0.85;
   letter-spacing: 0;
   white-space: nowrap;
   text-transform: uppercase;
-  transform: scaleX(0.4);
-  transform-origin: left center;
 }
 
 .contact-cta p {
@@ -65,11 +62,9 @@ import BaseButton from './BaseButton.vue'
 
 @media (max-width: 767px) {
   .contact-cta__title {
-    width: auto;
     max-width: 100%;
-    font-size: clamp(4.25rem, 18vw, 6rem);
+    font-size: clamp(5rem, 23vw, 6.8rem);
     white-space: normal;
-    transform: none;
   }
 }
 </style>

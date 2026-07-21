@@ -92,7 +92,7 @@ const footerColumns = [
 
 .app-footer__signature {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(5.5rem, 11vw, 10rem);
   line-height: 0.85;
 }
 
