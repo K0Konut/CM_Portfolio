@@ -89,30 +89,37 @@ const aboutPills = [
     <span class="home-doodle home-doodle--diamond home-hero__diamond" aria-hidden="true"></span>
     <span class="home-doodle home-doodle--burst home-hero__burst" aria-hidden="true"></span>
     <span class="home-doodle home-doodle--spark home-hero__spark" aria-hidden="true"></span>
-    <span class="decor-word home-hero__decor" aria-hidden="true">Creative dev</span>
+    <span class="home-doodle home-doodle--arrow home-hero__arrow" aria-hidden="true"></span>
+    <span class="home-doodle home-doodle--squiggle home-hero__squiggle" aria-hidden="true"></span>
+    <span class="home-doodle home-doodle--bolt home-hero__bolt" aria-hidden="true"></span>
     <div class="container content-layer home-hero__grid">
-      <div>
-        <p class="home-hero__eyebrow">Creative full-stack playground</p>
+      <div class="home-hero__copy">
+        <p class="home-hero__eyebrow">CREATIVE FULL-STACK PLAYGROUND</p>
         <h1 class="display-word home-hero__title">
           <span>Costa</span>
           <span>Maskulov</span>
         </h1>
-        <p class="home-hero__role">Developpeur full-stack</p>
+        <p class="home-hero__role">Développeur full-stack</p>
         <p class="home-hero__text">
-          Je transforme des idees en interfaces vivantes, creatives et maintenables.
+          Je transforme des idées en interfaces vivantes, créatives et maintenables.
         </p>
         <div class="home-hero__actions">
           <BaseButton href="/projets">Voir mes projets</BaseButton>
-          <BaseButton href="/contact" variant="pink">Me contacter</BaseButton>
+          <BaseButton href="/contact" variant="outline">Me contacter</BaseButton>
         </div>
-        <div class="home-hero__pills" aria-label="Competences principales">
-          <StackTag label="Vue" tone="violet" />
-          <StackTag label="Node" tone="cream" />
-          <StackTag label="TypeScript" tone="dark" />
-          <StackTag label="GitHub" tone="dark" />
+        <div class="home-hero__pills" aria-label="Compétences principales">
+          <span class="home-hero__pill-code">&lt;/&gt;</span>
+          <span>Vue.js</span>
+          <span class="home-hero__pill-dot" aria-hidden="true"></span>
+          <span>Node.js</span>
+          <span class="home-hero__pill-dot" aria-hidden="true"></span>
+          <span>Creative UI</span>
+          <span class="home-hero__pill-dot" aria-hidden="true"></span>
+          <span>GitHub</span>
         </div>
       </div>
       <div class="home-hero__code" aria-hidden="true">
+        <p class="home-hero__code-file">portfolio.ts</p>
         <div class="home-hero__code-bar">
           <span></span>
           <span></span>
@@ -120,13 +127,13 @@ const aboutPills = [
         </div>
         <div class="home-hero__code-content">
           <p><span>const</span> costa = {</p>
-          <p><i>role:</i> "full-stack developer",</p>
-          <p><i>focus:</i> "creative interfaces",</p>
-          <p><i>stack:</i> ["Vue", "Node", "Firebase"]</p>
+          <p><i>role:</i> <em>"full-stack developer"</em>,</p>
+          <p><i>focus:</i> <em>"creative interfaces"</em>,</p>
+          <p><i>stack:</i> [<em>"Vue"</em>, <em>"Node"</em>, <em>"Firebase"</em>]</p>
           <p>}</p>
         </div>
-        <div class="home-hero__code-chip">available_for_interface</div>
-        <span class="home-hero__code-sticker">Creative dev</span>
+        <div class="home-hero__code-chip">status:<br />available_for_alternance</div>
+        <span class="home-hero__code-sticker">Creative<br />dev</span>
       </div>
     </div>
   </section>
@@ -342,6 +349,58 @@ const aboutPills = [
   transform: rotate(-45deg);
 }
 
+.home-doodle--squiggle {
+  width: 188px;
+  height: 76px;
+  color: currentColor;
+  opacity: 0.42;
+}
+
+.home-doodle--squiggle::before {
+  position: absolute;
+  left: 8px;
+  top: 30px;
+  width: 128px;
+  height: 38px;
+  border-top: 7px solid currentColor;
+  border-radius: 50%;
+  content: "";
+  transform: rotate(8deg);
+}
+
+.home-doodle--squiggle::after {
+  position: absolute;
+  right: 8px;
+  top: 40px;
+  width: 28px;
+  height: 28px;
+  border-right: 7px solid currentColor;
+  border-bottom: 7px solid currentColor;
+  content: "";
+  transform: rotate(-18deg);
+}
+
+.home-doodle--bolt {
+  width: 250px;
+  height: 315px;
+  color: currentColor;
+  opacity: 0.54;
+}
+
+.home-doodle--bolt::before,
+.home-doodle--bolt::after {
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  clip-path: polygon(39% 0, 100% 14%, 70% 42%, 95% 51%, 9% 100%, 36% 61%, 0 51%);
+  content: "";
+}
+
+.home-doodle--bolt::after {
+  inset: 32px;
+  background: var(--color-brand-electric);
+}
+
 .home-section-title--projects {
   max-width: 860px;
 }
@@ -352,46 +411,105 @@ const aboutPills = [
 }
 
 .home-hero {
-  min-height: 720px;
   display: flex;
   align-items: center;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.home-hero__decor {
-  right: 7%;
-  top: 17%;
-  color: var(--color-brand-deep);
-  font-size: clamp(4.5rem, 8vw, 8rem);
-  opacity: 0.16;
-  transform: rotate(12deg);
+  min-height: calc(100svh - 80px);
+  padding: 0 clamp(88px, 5.4vw, 116px);
 }
 
 .home-hero__diamond {
-  left: 37%;
-  top: 15%;
+  left: 40%;
+  top: 18%;
   color: var(--color-brand-deep);
 }
 
 .home-hero__burst {
-  right: 8%;
-  top: 7%;
+  right: 6%;
+  top: 8%;
   color: var(--color-brand-deep);
 }
 
 .home-hero__spark {
-  right: 22%;
+  width: 70px;
+  height: 70px;
+  left: 50%;
+  top: 3%;
+  color: var(--color-brand-deep);
+  opacity: 0.64;
+  background:
+    linear-gradient(currentColor, currentColor) center / 10px 70px no-repeat,
+    linear-gradient(90deg, currentColor, currentColor) center / 70px 10px no-repeat,
+    linear-gradient(45deg, transparent 46%, currentColor 47%, currentColor 53%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, currentColor 47%, currentColor 53%, transparent 54%);
+  border-radius: 999px;
+}
+
+.home-hero__spark::before,
+.home-hero__spark::after {
+  display: none;
+}
+
+.home-hero__arrow {
+  left: 36%;
   bottom: 15%;
+  color: var(--color-brand-deep);
+}
+
+.home-hero__squiggle {
+  left: 39%;
+  top: 42%;
+  color: var(--color-brand-deep);
+}
+
+.home-hero__bolt {
+  right: 2%;
+  bottom: 2%;
   color: var(--color-brand-deep);
 }
 
 .home-hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 620px) minmax(360px, 500px);
+  width: min(100%, 1820px);
+  grid-template-columns: minmax(520px, 720px) minmax(600px, 760px);
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4xl);
+}
+
+.home-hero__copy {
+  position: relative;
+}
+
+.home-hero__copy::before,
+.home-hero__copy::after {
+  position: absolute;
+  z-index: 0;
+  left: -80px;
+  width: 560px;
+  height: 96px;
+  border-radius: 999px;
+  background: var(--color-brand-deep);
+  clip-path: polygon(0 28%, 92% 0, 100% 46%, 8% 100%);
+  content: "";
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.home-hero__copy::before {
+  top: 86px;
+  transform: rotate(10deg);
+}
+
+.home-hero__copy::after {
+  top: 236px;
+  width: 620px;
+  opacity: 0.4;
+  transform: rotate(16deg);
+}
+
+.home-hero__copy > * {
+  position: relative;
+  z-index: 1;
 }
 
 .home-hero__eyebrow,
@@ -400,17 +518,30 @@ const aboutPills = [
   font-weight: 950;
 }
 
+.home-hero__eyebrow {
+  color: var(--color-neutral-cream);
+  font-size: clamp(1.05rem, 1.25vw, 1.45rem);
+  line-height: 1.1;
+}
+
+.home-hero__role {
+  margin-top: var(--space-xl);
+  font-size: clamp(2.05rem, 2.8vw, 3rem);
+  line-height: 1;
+}
+
 .home-hero__text {
-  max-width: 560px;
-  margin-top: var(--space-md);
+  max-width: 670px;
+  margin-top: var(--space-lg);
   color: rgba(245, 241, 232, 0.86);
-  font-size: 1.25rem;
+  font-size: clamp(1.45rem, 2vw, 2.15rem);
+  line-height: 1.65;
 }
 
 .home-hero__title {
   width: min(100%, 660px);
-  margin-top: var(--space-xs);
-  font-size: clamp(10rem, 15vw, 15rem);
+  margin-top: var(--space-sm);
+  font-size: clamp(10rem, 14.2vw, 14.8rem);
 }
 
 .home-hero__title span {
@@ -424,59 +555,96 @@ const aboutPills = [
   margin-top: var(--space-xl);
 }
 
+.home-hero__actions .base-button {
+  min-height: 56px;
+  padding: 0 34px;
+  font-size: 1.08rem;
+}
+
 .home-hero__pills {
   display: flex;
   width: max-content;
   max-width: 100%;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 18px;
   margin-top: var(--space-xl);
-  padding: 6px;
+  padding: 8px 20px;
   border: 2px solid rgba(23, 16, 91, 0.55);
   border-radius: 999px;
-  background: rgba(23, 16, 91, 0.35);
+  background: rgba(23, 16, 91, 0.34);
+  color: var(--color-neutral-cream);
+  font-weight: 850;
+}
+
+.home-hero__pill-code {
+  color: var(--color-accent-lime);
+  font-family: "Courier New", monospace;
+  font-weight: 950;
+}
+
+.home-hero__pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent-lime);
 }
 
 .home-hero__code {
   position: relative;
-  min-height: 430px;
+  z-index: 2;
+  justify-self: end;
+  width: min(100%, clamp(560px, 35vw, 700px));
+  min-height: clamp(450px, 31vw, 545px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--space-xl);
+  padding: clamp(36px, 3vw, 52px);
   border: var(--border-strong);
-  border-radius: 24px;
+  border-radius: 32px;
   background: var(--color-neutral-black);
   box-shadow: 10px 10px 0 var(--color-neutral-cream);
   color: var(--color-accent-lime);
-  transform: rotate(6deg);
+  transform: rotate(7deg);
+}
+
+.home-hero__code-file {
+  color: var(--color-accent-lime);
+  font-family: "Courier New", monospace;
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-weight: 900;
 }
 
 .home-hero__code-bar {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  margin-bottom: var(--space-xl);
+  margin-top: calc(var(--space-xl) * -1);
+  margin-bottom: var(--space-2xl);
 }
 
 .home-hero__code-bar span {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  background: var(--color-accent-lime);
+  background: var(--color-accent-pink);
 }
 
 .home-hero__code-bar span:nth-child(2) {
+  background: var(--color-accent-lime);
+}
+
+.home-hero__code-bar span:nth-child(3) {
   background: var(--color-neutral-cream);
 }
 
 .home-hero__code-content {
   overflow: hidden;
-  color: var(--color-accent-lime);
+  color: var(--color-neutral-cream);
   font-family: "Courier New", monospace;
-  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+  font-size: clamp(1.2rem, 1.55vw, 1.75rem);
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 .home-hero__code-content span {
@@ -484,39 +652,46 @@ const aboutPills = [
 }
 
 .home-hero__code-content i {
-  color: var(--color-neutral-cream);
+  color: var(--color-accent-pink);
+  font-style: normal;
+}
+
+.home-hero__code-content em {
+  color: var(--color-accent-lime);
   font-style: normal;
 }
 
 .home-hero__code-chip {
   width: 100%;
-  margin-top: var(--space-xl);
-  padding: 18px 22px;
+  margin-top: var(--space-3xl);
+  padding: 22px 26px;
   border: 2px solid var(--color-neutral-black);
   border-radius: 15px;
   background: var(--color-accent-lime);
   color: var(--color-neutral-black);
   font-family: "Courier New", monospace;
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.3vw, 1.38rem);
   font-weight: 900;
+  line-height: 1.25;
 }
 
 .home-hero__code-sticker {
   position: absolute;
-  right: -34px;
-  top: -32px;
+  right: -54px;
+  top: -42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 136px;
-  min-height: 84px;
-  padding: 12px;
+  width: 178px;
+  min-height: 112px;
+  padding: 16px;
   border: var(--border-strong);
-  border-radius: 20px;
+  border-radius: 28px;
   background: var(--color-accent-pink);
   color: var(--color-neutral-black);
   font-weight: 900;
-  line-height: 1;
+  font-size: clamp(1.25rem, 1.85vw, 2rem);
+  line-height: 0.95;
   text-align: center;
   transform: rotate(8deg);
 }
@@ -828,7 +1003,9 @@ const aboutPills = [
   .home-hero {
     min-height: auto;
     padding-top: var(--space-4xl);
+    padding-right: var(--space-lg);
     padding-bottom: var(--space-4xl);
+    padding-left: var(--space-lg);
   }
 
   .home-hero__grid,
@@ -838,13 +1015,40 @@ const aboutPills = [
   }
 
   .home-hero__code {
+    width: 100%;
     min-height: 260px;
     transform: rotate(0deg);
+  }
+
+  .home-hero__copy::before,
+  .home-hero__copy::after,
+  .home-hero__diamond,
+  .home-hero__burst,
+  .home-hero__spark,
+  .home-hero__arrow,
+  .home-hero__squiggle,
+  .home-hero__bolt {
+    display: none;
   }
 
   .home-hero__title {
     width: 100%;
     font-size: clamp(5.7rem, 29vw, 7.2rem);
+  }
+
+  .home-hero__text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .home-hero__role {
+    font-size: clamp(1.85rem, 8vw, 2.15rem);
+  }
+
+  .home-hero__pills {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .home-projects,

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   href?: string
-  variant?: 'lime' | 'pink' | 'dark' | 'cream'
+  variant?: 'lime' | 'pink' | 'dark' | 'cream' | 'outline'
 }>()
 </script>
 
@@ -64,5 +64,16 @@ defineProps<{
 
 .base-button--cream {
   background: var(--color-neutral-cream);
+}
+
+.base-button--outline {
+  border-color: var(--color-neutral-cream);
+  background: transparent;
+  box-shadow: none;
+  color: var(--color-neutral-cream);
+}
+
+.base-button--outline:hover {
+  box-shadow: none;
 }
 </style>

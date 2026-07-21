@@ -7,7 +7,7 @@ body {
 }
 
 #app {
-  width: min(100%, var(--layout-page-width));
+  width: 100%;
   margin: 0 auto;
   background: var(--color-neutral-cream);
   min-height: 100vh;
