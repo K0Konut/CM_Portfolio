@@ -3,6 +3,12 @@ import BaseButton from '@/design-system/components/BaseButton.vue'
 import ContactCTA from '@/design-system/components/ContactCTA.vue'
 import SectionTitle from '@/design-system/components/SectionTitle.vue'
 import StackTag from '@/design-system/components/StackTag.vue'
+import heroArrow from '@/assets/doodles/hero/hero-arrow.svg'
+import heroBrush from '@/assets/doodles/hero/hero-brush.svg'
+import heroBurst from '@/assets/doodles/hero/hero-burst.svg'
+import heroLightning from '@/assets/doodles/hero/hero-lightning.svg'
+import heroStar from '@/assets/doodles/hero/hero-star.svg'
+import heroTrace from '@/assets/doodles/hero/hero-trace.svg'
 import ProjectCard from '@/features/projects/components/ProjectCard.vue'
 import { featuredProjects } from '@/shared/data/projects'
 
@@ -86,12 +92,42 @@ const aboutPills = [
 
 <template>
   <section class="home-hero section section--violet">
-    <span class="home-doodle home-doodle--diamond home-hero__diamond" aria-hidden="true"></span>
-    <span class="home-doodle home-doodle--burst home-hero__burst" aria-hidden="true"></span>
-    <span class="home-doodle home-doodle--spark home-hero__spark" aria-hidden="true"></span>
-    <span class="home-doodle home-doodle--arrow home-hero__arrow" aria-hidden="true"></span>
-    <span class="home-doodle home-doodle--squiggle home-hero__squiggle" aria-hidden="true"></span>
-    <span class="home-doodle home-doodle--bolt home-hero__bolt" aria-hidden="true"></span>
+    <img
+      class="home-hero__doodle home-hero__doodle--brush"
+      :src="heroBrush"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="home-hero__doodle home-hero__doodle--star"
+      :src="heroStar"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="home-hero__doodle home-hero__doodle--burst"
+      :src="heroBurst"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="home-hero__doodle home-hero__doodle--trace"
+      :src="heroTrace"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="home-hero__doodle home-hero__doodle--arrow"
+      :src="heroArrow"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="home-hero__doodle home-hero__doodle--lightning"
+      :src="heroLightning"
+      alt=""
+      aria-hidden="true"
+    />
     <div class="container content-layer home-hero__grid">
       <div class="home-hero__copy">
         <p class="home-hero__eyebrow">CREATIVE FULL-STACK PLAYGROUND</p>
@@ -349,58 +385,6 @@ const aboutPills = [
   transform: rotate(-45deg);
 }
 
-.home-doodle--squiggle {
-  width: 188px;
-  height: 76px;
-  color: currentColor;
-  opacity: 0.42;
-}
-
-.home-doodle--squiggle::before {
-  position: absolute;
-  left: 8px;
-  top: 30px;
-  width: 128px;
-  height: 38px;
-  border-top: 7px solid currentColor;
-  border-radius: 50%;
-  content: "";
-  transform: rotate(8deg);
-}
-
-.home-doodle--squiggle::after {
-  position: absolute;
-  right: 8px;
-  top: 40px;
-  width: 28px;
-  height: 28px;
-  border-right: 7px solid currentColor;
-  border-bottom: 7px solid currentColor;
-  content: "";
-  transform: rotate(-18deg);
-}
-
-.home-doodle--bolt {
-  width: 250px;
-  height: 315px;
-  color: currentColor;
-  opacity: 0.54;
-}
-
-.home-doodle--bolt::before,
-.home-doodle--bolt::after {
-  position: absolute;
-  inset: 0;
-  background: currentColor;
-  clip-path: polygon(39% 0, 100% 14%, 70% 42%, 95% 51%, 9% 100%, 36% 61%, 0 51%);
-  content: "";
-}
-
-.home-doodle--bolt::after {
-  inset: 32px;
-  background: var(--color-brand-electric);
-}
-
 .home-section-title--projects {
   max-width: 860px;
 }
@@ -412,104 +396,71 @@ const aboutPills = [
 
 .home-hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   min-height: calc(100svh - 80px);
-  padding: 0 clamp(88px, 5.4vw, 116px);
+  padding: clamp(86px, 5.4vw, 108px) clamp(88px, 5.4vw, 116px)
+    clamp(58px, 4vw, 84px);
 }
 
-.home-hero__diamond {
-  left: 40%;
-  top: 18%;
-  color: var(--color-brand-deep);
+.home-hero__doodle {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
 }
 
-.home-hero__burst {
-  right: 6%;
-  top: 8%;
-  color: var(--color-brand-deep);
+.home-hero__doodle--brush {
+  left: clamp(-28px, -1.1vw, -10px);
+  top: 15%;
+  width: clamp(520px, 34.5vw, 666px);
 }
 
-.home-hero__spark {
-  width: 70px;
-  height: 70px;
-  left: 50%;
-  top: 3%;
-  color: var(--color-brand-deep);
-  opacity: 0.64;
-  background:
-    linear-gradient(currentColor, currentColor) center / 10px 70px no-repeat,
-    linear-gradient(90deg, currentColor, currentColor) center / 70px 10px no-repeat,
-    linear-gradient(45deg, transparent 46%, currentColor 47%, currentColor 53%, transparent 54%),
-    linear-gradient(-45deg, transparent 46%, currentColor 47%, currentColor 53%, transparent 54%);
-  border-radius: 999px;
+.home-hero__doodle--star {
+  left: 49.5%;
+  top: 13%;
+  width: clamp(50px, 3.5vw, 64px);
+  transform: translateX(-50%);
 }
 
-.home-hero__spark::before,
-.home-hero__spark::after {
-  display: none;
+.home-hero__doodle--burst {
+  right: 7.5%;
+  top: 8.5%;
+  width: clamp(96px, 6.5vw, 118px);
+  transform: rotate(-4deg);
 }
 
-.home-hero__arrow {
-  left: 36%;
-  bottom: 15%;
-  color: var(--color-brand-deep);
-}
-
-.home-hero__squiggle {
+.home-hero__doodle--trace {
   left: 39%;
   top: 42%;
-  color: var(--color-brand-deep);
+  width: clamp(128px, 9vw, 164px);
 }
 
-.home-hero__bolt {
-  right: 2%;
-  bottom: 2%;
-  color: var(--color-brand-deep);
+.home-hero__doodle--arrow {
+  left: 37%;
+  bottom: 12%;
+  width: clamp(178px, 12.5vw, 224px);
+  transform: rotate(-6deg);
+}
+
+.home-hero__doodle--lightning {
+  right: 2.5%;
+  bottom: 1.8%;
+  width: clamp(190px, 12vw, 230px);
 }
 
 .home-hero__grid {
   display: grid;
   width: min(100%, 1820px);
-  grid-template-columns: minmax(520px, 720px) minmax(600px, 760px);
+  grid-template-columns: minmax(500px, 650px) minmax(520px, 640px);
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4xl);
+  gap: clamp(52px, 6vw, 104px);
 }
 
 .home-hero__copy {
   position: relative;
-}
-
-.home-hero__copy::before,
-.home-hero__copy::after {
-  position: absolute;
-  z-index: 0;
-  left: -80px;
-  width: 560px;
-  height: 96px;
-  border-radius: 999px;
-  background: var(--color-brand-deep);
-  clip-path: polygon(0 28%, 92% 0, 100% 46%, 8% 100%);
-  content: "";
-  opacity: 0.48;
-  pointer-events: none;
-}
-
-.home-hero__copy::before {
-  top: 86px;
-  transform: rotate(10deg);
-}
-
-.home-hero__copy::after {
-  top: 236px;
-  width: 620px;
-  opacity: 0.4;
-  transform: rotate(16deg);
-}
-
-.home-hero__copy > * {
-  position: relative;
-  z-index: 1;
 }
 
 .home-hero__eyebrow,
@@ -520,28 +471,28 @@ const aboutPills = [
 
 .home-hero__eyebrow {
   color: var(--color-neutral-cream);
-  font-size: clamp(1.05rem, 1.25vw, 1.45rem);
+  font-size: clamp(1rem, 1.16vw, 1.28rem);
   line-height: 1.1;
 }
 
 .home-hero__role {
-  margin-top: var(--space-xl);
-  font-size: clamp(2.05rem, 2.8vw, 3rem);
+  margin-top: var(--space-lg);
+  font-size: clamp(1.9rem, 2.4vw, 2.45rem);
   line-height: 1;
 }
 
 .home-hero__text {
-  max-width: 670px;
+  max-width: 625px;
   margin-top: var(--space-lg);
   color: rgba(245, 241, 232, 0.86);
-  font-size: clamp(1.45rem, 2vw, 2.15rem);
-  line-height: 1.65;
+  font-size: clamp(1.22rem, 1.65vw, 1.72rem);
+  line-height: 1.55;
 }
 
 .home-hero__title {
-  width: min(100%, 660px);
+  width: min(100%, 600px);
   margin-top: var(--space-sm);
-  font-size: clamp(10rem, 14.2vw, 14.8rem);
+  font-size: clamp(8.25rem, 12vw, 12.75rem);
 }
 
 .home-hero__title span {
@@ -556,9 +507,10 @@ const aboutPills = [
 }
 
 .home-hero__actions .base-button {
-  min-height: 56px;
-  padding: 0 34px;
-  font-size: 1.08rem;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 14px;
+  font-size: 1rem;
 }
 
 .home-hero__pills {
@@ -567,9 +519,9 @@ const aboutPills = [
   max-width: 100%;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 18px;
-  margin-top: var(--space-xl);
-  padding: 8px 20px;
+  gap: 16px;
+  margin-top: var(--space-lg);
+  padding: 7px 18px;
   border: 2px solid rgba(23, 16, 91, 0.55);
   border-radius: 999px;
   background: rgba(23, 16, 91, 0.34);
@@ -594,38 +546,38 @@ const aboutPills = [
   position: relative;
   z-index: 2;
   justify-self: end;
-  width: min(100%, clamp(560px, 35vw, 700px));
-  min-height: clamp(450px, 31vw, 545px);
+  width: min(100%, clamp(500px, 31vw, 620px));
+  min-height: clamp(390px, 26.5vw, 500px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(36px, 3vw, 52px);
+  padding: clamp(30px, 2.4vw, 42px);
   border: var(--border-strong);
-  border-radius: 32px;
+  border-radius: 28px;
   background: var(--color-neutral-black);
   box-shadow: 10px 10px 0 var(--color-neutral-cream);
   color: var(--color-accent-lime);
-  transform: rotate(7deg);
+  transform: translateY(-14px) rotate(7deg);
 }
 
 .home-hero__code-file {
   color: var(--color-accent-lime);
   font-family: "Courier New", monospace;
-  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-size: clamp(0.94rem, 1vw, 1.14rem);
   font-weight: 900;
 }
 
 .home-hero__code-bar {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
-  margin-top: calc(var(--space-xl) * -1);
-  margin-bottom: var(--space-2xl);
+  gap: 8px;
+  margin-top: calc(var(--space-lg) * -1);
+  margin-bottom: var(--space-xl);
 }
 
 .home-hero__code-bar span {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: var(--color-accent-pink);
 }
@@ -642,7 +594,7 @@ const aboutPills = [
   overflow: hidden;
   color: var(--color-neutral-cream);
   font-family: "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.55vw, 1.75rem);
+  font-size: clamp(1.05rem, 1.32vw, 1.42rem);
   font-weight: 700;
   line-height: 1.55;
 }
@@ -663,34 +615,34 @@ const aboutPills = [
 
 .home-hero__code-chip {
   width: 100%;
-  margin-top: var(--space-3xl);
-  padding: 22px 26px;
+  margin-top: var(--space-2xl);
+  padding: 18px 22px;
   border: 2px solid var(--color-neutral-black);
   border-radius: 15px;
   background: var(--color-accent-lime);
   color: var(--color-neutral-black);
   font-family: "Courier New", monospace;
-  font-size: clamp(1rem, 1.3vw, 1.38rem);
+  font-size: clamp(0.94rem, 1.12vw, 1.2rem);
   font-weight: 900;
   line-height: 1.25;
 }
 
 .home-hero__code-sticker {
   position: absolute;
-  right: -54px;
-  top: -42px;
+  right: -42px;
+  top: -48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 178px;
-  min-height: 112px;
+  width: clamp(132px, 8.6vw, 158px);
+  min-height: clamp(82px, 5.6vw, 98px);
   padding: 16px;
   border: var(--border-strong);
-  border-radius: 28px;
+  border-radius: 24px;
   background: var(--color-accent-pink);
   color: var(--color-neutral-black);
   font-weight: 900;
-  font-size: clamp(1.25rem, 1.85vw, 2rem);
+  font-size: clamp(1.08rem, 1.55vw, 1.62rem);
   line-height: 0.95;
   text-align: center;
   transform: rotate(8deg);
@@ -1020,14 +972,7 @@ const aboutPills = [
     transform: rotate(0deg);
   }
 
-  .home-hero__copy::before,
-  .home-hero__copy::after,
-  .home-hero__diamond,
-  .home-hero__burst,
-  .home-hero__spark,
-  .home-hero__arrow,
-  .home-hero__squiggle,
-  .home-hero__bolt {
+  .home-hero__doodle {
     display: none;
   }
 

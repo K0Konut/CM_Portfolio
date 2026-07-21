@@ -1,6 +1,6 @@
 # Suivi de projet - Portfolio Costa Maskulov
 
-Derniere mise a jour : 2026-07-19
+Derniere mise a jour : 2026-07-22
 
 ## Objectif du fichier
 
@@ -31,6 +31,9 @@ avancer.
 Phase actuelle : integration demarree. Le scaffold Vue/Vite/TypeScript est en
 place sur la branche `dev/CM_Portfolio/integration-v1`, avec les premieres
 routes, tokens, composants de design system, donnees mockees et pages V1.
+La Hero de la page Accueil est maintenant consideree propre en integration :
+structure desktop stabilisee, vrais doodles exportes depuis Figma reintegres
+depuis `src/assets/doodles/hero/`, version mobile conservee sans doodles.
 ```
 
 Le design kit principal et les composants Figma necessaires existent deja.
@@ -196,6 +199,47 @@ Decision :
 
 Le hero est une composition specifique a la Home. Ses decorations n'ont pas
 besoin de devenir des composants reutilisables.
+
+Etat integration au 2026-07-22 :
+
+```txt
+Hero Accueil desktop propre pour pause d'iteration.
+```
+
+Fichiers concernes :
+
+- `src/features/home/HomePage.vue`
+- `src/assets/doodles/hero/hero-star.svg`
+- `src/assets/doodles/hero/hero-arrow.svg`
+- `src/assets/doodles/hero/hero-burst.svg`
+- `src/assets/doodles/hero/hero-lightning.svg`
+- `src/assets/doodles/hero/hero-trace.svg`
+- `src/assets/doodles/hero/hero-brush.svg`
+
+Decisions d'integration validees :
+
+- la Hero reste full width, sans marge laterale visible ;
+- la structure principale est prioritaire sur le pixel perfect ;
+- les doodles temporaires CSS ont ete retires ;
+- les doodles de la Hero sont maintenant des exports SVG Figma places en
+  absolute ;
+- les doodles sont masques en mobile pour eviter de charger une version deja
+  dense ;
+- les CTA de la Hero sont plus arrondis pour se rapprocher de la maquette ;
+- le sticker `Creative dev` est remonte pour mieux laisser lire le shell ;
+- le brush derriere `Costa Maskulov` vient du SVG exporte, pas d'un effet CSS.
+
+Verification effectuee :
+
+- `npm run build` passe ;
+- capture desktop Playwright validee en 1824 x 918 ;
+- capture mobile Playwright validee en 390 x 844.
+
+Points a reprendre plus tard :
+
+- optimiser les SVG, surtout `hero-brush.svg`, qui est lourd ;
+- verifier si le petit doodle losange du Hero doit etre exporte et ajoute ;
+- faire une passe pixel perfect plus fine une fois toute la Home posee.
 
 ## 3. Projets mis en avant
 
